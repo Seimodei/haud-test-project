@@ -1,0 +1,19 @@
+$main-color: #29123a;
+$pri-color: #672C90;
+$sec-color: #f6b93b;
+$white: #fff;
+$red: #ff4757;
+$green: #1abc9c;
+
+$grey: #a4b0be;
+$light-grey: #ced6e0;
+$lighter-grey: #f1f2f6;
+
+
+:export {
+  mainColor: $main-color;
+  primary: $pri-color;
+  grey: $grey;
+  lighterGrey: $lighter-grey;
+  red: $red;
+}

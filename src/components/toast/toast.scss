@@ -1,0 +1,58 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.notification {
+  position: fixed;
+  top: 60px;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+  pointer-events: none;
+  animation: enter-anim .3s 1;
+
+  .content {
+    position: relative;
+    background-color: lighten($green, 53);
+    border-radius: 3px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
+    max-width: 300px;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    .info {
+      font-size: 75%;
+      text-align: center;
+      color: $green;
+
+      .title {
+        display: block;
+        font-weight: 600;
+      }
+    }
+
+    .close {
+      position: absolute;
+      font-size: 60%;
+      top: 2px;
+      right: 5px;
+      color: darken($grey, 20);
+      cursor: pointer;
+      pointer-events: auto;
+    }
+  }
+
+  &.err {
+    .content {
+      background-color: lighten($red, 30);
+
+      .info {
+        color: $red;
+      }
+    }
+  }
+}

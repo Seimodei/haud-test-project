@@ -1,0 +1,133 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.user {
+  margin-top: 20px;
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid rgba($pri-color, .07);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.08);
+
+  .top {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $lighter-grey;
+
+    span {
+      display: block;
+
+      &.name {
+        font-size: 130%;
+        font-weight: 700;
+        color: $pri-color;
+
+        @include mQ (565px) {
+          font-size: 120%;
+        }
+      }
+    }
+  }
+
+  .info-group {
+    padding: 15px;
+    border-bottom: 1px solid $lighter-grey;
+
+    .info-title {
+      display: flex;
+      align-items: center;
+
+      @include mQ (755px) {
+        justify-content: center;
+      }
+
+      .title-icon {
+        color: $pri-color;
+      }
+
+      span {
+        padding-left: 10px;
+        font-size: 120%;
+        font-weight: 700;
+        color: $grey;
+
+        @include mQ (565px) {
+          font-size: 110%;
+        }
+      }
+    }
+
+    .info {
+      line-height: 145%;
+      font-weight: 500;
+      margin-top: 5px;
+      display: block;
+
+      @include mQ (565px) {
+        font-size: 90%;
+      }
+    }
+  }
+
+  .bottom {
+    position: relative;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mQ (565px) {
+      flex-direction: column;
+    }
+
+    .date {
+      font-weight: 800;
+      font-size: 80%;
+
+      @include mQ (565px) {
+        padding-bottom: 15px;
+      }
+    }
+
+    .pop-up {
+      position: absolute;
+      right: 15px;
+      top: -130px;
+      background-color: $white;
+      box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+      border-radius: 3px;
+      padding: 15px;
+      max-width: 300px;
+      font-size: 90%;
+      font-weight: 600;
+      line-height: 145%;
+      animation: enter-anim .3s 1;
+
+      span {
+        &.question {
+          color: $red;
+        }
+      }
+
+      .confirm {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+
+        span {
+          background-color: $white;
+          box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.15);
+          border-radius: 3px;
+          padding: 5px 10px;
+          cursor: pointer;
+
+          &:nth-child(1) {
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}

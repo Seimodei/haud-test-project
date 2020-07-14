@@ -1,0 +1,5 @@
+@mixin mQ ($arg) {
+  @media (max-width: #{$arg}) {
+    @content;
+  }
+}

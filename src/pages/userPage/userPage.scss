@@ -1,0 +1,116 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+
+.user-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 100px;
+  animation: enter-anim .3s 1;
+
+  .logo {
+    margin-top: 20px;
+    
+    img {
+      width: 100px;
+    }
+
+    @include mQ (565px) {
+      width: 80px;
+    }
+  }
+
+  .user-title {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 200%;
+    font-weight: 700;
+    color: $pri-color;
+
+    @include mQ (565px) {
+      font-size: 150%;
+    }
+  }
+
+  p {
+    text-align: center;
+    margin-top: 10px;
+    padding-bottom: 30px;
+
+    @include mQ (565px) {
+      font-size: 90%;
+    }
+  }
+
+  .input-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    @include mQ (430px) {
+      flex-direction: column;
+    }
+
+    .single-input {
+      width: 100%;
+
+      label {
+        font-weight: 700;
+      }
+
+      input {
+        margin-top: 10px;
+      }
+    }
+
+    &.double {
+      .single-input {
+        width: 49%;
+
+        @include mQ (430px) {
+          width: 100%;
+
+          label {
+            display: block;
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+
+  .error-message {
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    color: $red;
+    margin-top: 15px;
+    text-align: center;
+
+    span {
+      font-size: 90%;
+      display: block;
+      padding: 3px 10px;
+      border-radius: 3px;
+      background-color: rgba($red, .075);
+    }
+  }
+
+  .button-wrap {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    @include mQ (430px) {
+      flex-direction: column;
+      
+      .button {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

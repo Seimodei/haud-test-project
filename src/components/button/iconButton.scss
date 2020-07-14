@@ -1,0 +1,26 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  background-color: $pri-color;
+  color: $white;
+  border-radius: 50%;
+  font-size: 80%;
+  transition: all .15s;
+  cursor: pointer;
+
+  @include mQ (565px) {
+    width: 30px;
+    height: 30px;
+  }
+
+  &:hover {
+    background-color: $sec-color;
+    color: $pri-color;
+  }
+}
