@@ -239,6 +239,7 @@ export const deleteUserAsync = (userId: string) => {
       .then(res => {
         dispatch(deletingUser(false));
         dispatch(deleteUserSuccess(true));
+        dispatch(getAllUsersAsync());
         dispatch(actions.notifications.alertNotification({
           status: true,
           message: 'User account has been deleted successfully!!',
